@@ -74,5 +74,24 @@ namespace AssesmentProject.Models
         [Required(ErrorMessage = "Please enter Postal Code"), MaxLength(30)]
         [Display(Name = "Postal Code")]
         public string PostalCode { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "Please enter Lattitude"), MaxLength(30)]
+        [Display(Name = "Geo Lattitude")]
+        public string GeoLat { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "Please enter Longitude"), MaxLength(30)]
+        [Display(Name = "Geo Longitude")]
+        public string GeoLong { get; set; }
+    }
+
+    public class ContactInMap {
+
+        public int ContactID { get; set; }
+        public string FirstName { get; set; }
+        public string PlaceName { get; set; }
+        public string GeoLat { get; set; }
+        public string GeoLong { get; set; }
     }
 }

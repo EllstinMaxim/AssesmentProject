@@ -129,9 +129,13 @@ namespace AssesmentProject.Controllers
 
         public ActionResult MapView()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Map View";
 
-            return View();
+            List<ContactInMap> rtnList = svcObj.GetContactsListInMap();
+
+            return View(rtnList);
         }
+
+        
     }
 }
