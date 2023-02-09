@@ -43,6 +43,8 @@ namespace AssesmentProject.Controllers
         {
             List<Contact> rtnList = svcObj.GetContactsList();
 
+            rtnList = rtnList.OrderByDescending(x => x.ContactID).ToList();
+
             if (isRedirect!=null)
             {
                 if ((bool)isRedirect)
